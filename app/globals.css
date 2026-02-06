@@ -8,6 +8,41 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  /* White & Light Colors */
+  --color-white: #ffffff;
+  --color-off-white: #fafafa;
+  --color-light-gray-1: #eff0f3;
+  --color-light-gray-2: #eef0f3;
+  --color-light-gray-3: #e6e6e6;
+  
+  /* Gray Colors */
+  --color-gray-medium: #636363;
+  --color-gray-dark: #3b3b3b;
+  --color-gray-darker: #303738;
+  --color-black: #000000;
+  
+  /* Orange Colors */
+  --color-orange: #ff792d;
+  
+  /* Yellow Colors */
+  --color-yellow-pale: #f3d268;
+  --color-yellow-gold: #fbc310;
+  
+  /* Green/Mint Colors */
+  --color-mint-light: #88ebc5;
+  --color-mint-bright: #83ffcf;
+  --color-mint-pale: #9cffd9;
+  --color-green-yellow-bright: #ceff48;
+  --color-green-yellow-pale: #d8ff6d;
+  
+  /* Pink Colors */
+  --color-pink-light: #f8a5bd;
+  --color-pink-coral: #ffa8c1;
+  
+  /* Purple Colors */
+  --color-purple-light: #a86fff;
+  
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
