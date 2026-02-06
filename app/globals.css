@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  --breakpoint-sm: 0px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1536px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +27,94 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Text utilities ===== */
+
+@utility h1 {
+  /* TODO: sm-стили взяты из h2 — могут быть неактуальными */
+  font-size: 34px;
+  line-height: 38px;
+  letter-spacing: 0px;
+  font-weight: 400;
+
+  @media (width >= theme(--breakpoint-md)) {
+    /* TODO: md-стили взяты из h2 — могут быть неактуальными */
+    font-size: 47px;
+    line-height: 50px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 128px;
+    line-height: 125px;
+    letter-spacing: -4.42px;
+    font-weight: 400;
+  }
+}
+
+@utility h2 {
+  font-size: 34px;
+  line-height: 38px;
+  letter-spacing: 0px;
+  font-weight: 400;
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-size: 47px;
+    line-height: 50px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 56px;
+    line-height: 62.5px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+}
+
+@utility p1 {
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  font-weight: 400;
+
+  @media (width >= theme(--breakpoint-md)) {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 20px;
+    line-height: 31.5px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+}
+
+@utility p2 {
+  /* TODO: sm-стили взяты из p1 — могут быть неактуальными */
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  font-weight: 400;
+
+  @media (width >= theme(--breakpoint-md)) {
+    /* TODO: md-стили взяты из p1 — могут быть неактуальными */
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
+
+  @media (width >= theme(--breakpoint-lg)) {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0px;
+    font-weight: 400;
+  }
 }
