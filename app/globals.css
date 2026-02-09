@@ -6,6 +6,11 @@
 }
 
 @theme inline {
+  /* Custom breakpoints */
+  --breakpoint-sm: 0px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1536px;
+  
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
@@ -45,111 +50,43 @@
   
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  
-  --breakpoint-sm: 0px;
-  --breakpoint-md: 1024px;
-  --breakpoint-lg: 1536px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow: hidden;
 }
 
 /* ===== Text utilities ===== */
 
-@utility h1 {
+.h1 {
   /* TODO: sm-стили взяты из h2 — могут быть неактуальными */
-  font-size: 34px;
-  line-height: 38px;
-  letter-spacing: 0px;
-  font-weight: 400;
-
-  @media (width >= theme(--breakpoint-md)) {
-    /* TODO: md-стили взяты из h2 — могут быть неактуальными */
-    font-size: 47px;
-    line-height: 50px;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
-
-  @media (width >= theme(--breakpoint-lg)) {
-    font-size: 128px;
-    line-height: 125px;
-    letter-spacing: -4.42px;
-    font-weight: 400;
-  }
+  @apply text-[34px] leading-[38px] tracking-[0px] font-normal;
+  /* TODO: md-стили взяты из h2 — могут быть неактуальными */
+  @apply md:text-[47px] md:leading-[50px] md:tracking-[0px];
+  @apply lg:text-[128px] lg:leading-[125px] lg:tracking-[-4.42px];
 }
 
-@utility h2 {
-  font-size: 34px;
-  line-height: 38px;
-  letter-spacing: 0px;
-  font-weight: 400;
-
-  @media (width >= theme(--breakpoint-md)) {
-    font-size: 47px;
-    line-height: 50px;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
-
-  @media (width >= theme(--breakpoint-lg)) {
-    font-size: 56px;
-    line-height: 62.5px;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
+.h2 {
+  @apply text-[34px] leading-[38px] tracking-[0px] font-normal;
+  @apply md:text-[47px] md:leading-[50px] md:tracking-[0px];
+  @apply lg:text-[56px] lg:leading-[62.5px] lg:tracking-[0px];
 }
 
-@utility p1 {
-  font-size: 22px;
-  line-height: 28px;
-  letter-spacing: 0px;
-  font-weight: 400;
-
-  @media (width >= theme(--breakpoint-md)) {
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
-
-  @media (width >= theme(--breakpoint-lg)) {
-    font-size: 20px;
-    line-height: 31.5px;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
+.p1 {
+  @apply text-[22px] leading-[28px] tracking-[0px] font-normal;
+  @apply md:text-[16px] md:leading-[28px] md:tracking-[0px];
+  @apply lg:text-[20px] lg:leading-[31.5px] lg:tracking-[0px];
 }
 
-@utility p2 {
+.p2 {
   /* TODO: sm-стили взяты из p1 — могут быть неактуальными */
-  font-size: 22px;
-  line-height: 28px;
-  letter-spacing: 0px;
-  font-weight: 400;
-
-  @media (width >= theme(--breakpoint-md)) {
-    /* TODO: md-стили взяты из p1 — могут быть неактуальными */
-    font-size: 16px;
-    line-height: 28px;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
-
-  @media (width >= theme(--breakpoint-lg)) {
-    font-size: 16px;
-    line-height: 25px;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
+  @apply text-[22px] leading-[28px] tracking-[0px] font-normal;
+  /* TODO: md-стили взяты из p1 — могут быть неактуальными */
+  @apply md:text-[16px] md:leading-[28px] md:tracking-[0px];
+  @apply lg:text-[16px] lg:leading-[25px] lg:tracking-[0px];
 }
